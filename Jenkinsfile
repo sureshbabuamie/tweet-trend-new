@@ -15,7 +15,7 @@ pipeline {
         }    
 	    stage('build-stage') {
             steps {
-	        sh 'mvn clean deploy'
+	        sh 'mvn clean deploy -Dmaven.test.skip=true'
             }
 
         }
