@@ -5,7 +5,7 @@ pipeline {
         }
     }
     environment {
-        PATH='/usr/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/apache-maven-3.9.6/bin'
+        PATH='/usr/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/apache-maven-3.9.4/bin'
     }
     stages {
         stage('build-stage') {
