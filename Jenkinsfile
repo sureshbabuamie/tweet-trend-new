@@ -2,7 +2,7 @@ def registry = 'https://sureshbabuamie01.jfrog.io/'
 pipeline {
     agent {
         node {
-            label 'maven'
+            label 'maven-server'
         }
     }
 environment {
