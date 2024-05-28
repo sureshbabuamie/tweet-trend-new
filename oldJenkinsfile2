@@ -1,10 +1,9 @@
 def registry = 'https://sureshbabuamie01.jfrog.io/'
-def imagename = 'sureshbabuamie01.jfrog.io/artifactory/docker-trial/myapp'
-def version = '2.1.2'
+def imagename = ''
 pipeline {
     agent {
         node {
-            label 'maven'
+            label 'maven-server'
         }
     }
 environment {
@@ -51,31 +50,17 @@ environment {
             
                 }
             }   
-        }
-        stage ("docker build") {
-          steps {
-            script {
-                 echo "-------------------building the docker file starts-------------------------"
-                app = docker.build(imagename +":" + version)
-            }                                
+         } 
+        stage("docker build"){
+        steps {
+            
+                echo "-------------------building the docker file starts-------------------------"
+                sh 'pwd'
                }
             }
-
-        stage ("docker push") {
-          steps {
-            script {
-                 echo "-------------------pushing the docker file starts-------------------------"
-                 docker.withRegistry(registry,'jforg-cred') {
-                    app.push()
-                 }
-                }                                
-               }
-            }    
         }
 
     }
 
 
-
-    
 
