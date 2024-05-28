@@ -1,9 +1,8 @@
 def registry = 'https://sureshbabuamie01.jfrog.io/'
-def imagename = ''
 pipeline {
     agent {
         node {
-            label 'maven'
+            label 'maven-server'
         }
     }
 environment {
@@ -50,17 +49,6 @@ environment {
             
                 }
             }   
-        
-        stage("docker build"){
-        steps {
-            
-                echo "-------------------building the docker file starts-------------------------"
-                sh 'pwd'
-               }
-            }
         }
-
     }
-
 }
-
