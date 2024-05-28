@@ -50,7 +50,7 @@ environment {
             
                 }
             }   
-        
+         } 
         stage("docker build"){
         steps {
             
@@ -62,5 +62,5 @@ environment {
 
     }
 
-}
+
 
