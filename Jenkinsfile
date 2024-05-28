@@ -1,5 +1,5 @@
 def registry = 'https://sureshbabuamie01.jfrog.io/'
-def imagename = 'sureshbabuamie01.jfrog.io/artifactory/docker-trial/myapp'
+def imagename = 'sureshbabuamie01.jfrog.io/docker-trial/myapp'
 def version = '2.1.2'
 pipeline {
     agent {
