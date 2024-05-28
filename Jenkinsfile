@@ -3,7 +3,7 @@ def imagename = ''
 pipeline {
     agent {
         node {
-            label 'maven'
+            label 'maven-server'
         }
     }
 environment {
